@@ -1,1 +1,3 @@
-var flkty = new Flickity('.carousel');
+var flkty = new Flickity( '.carousel', {
+  hash: true,
+});

@@ -35,13 +35,6 @@ body {
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
-/* cell number */
-
-// .carousel-cell:before {
-//   display: block;
-//   text-align: center;
-//   content: counter(carousel-cell);
-//   line-height: 250px;
-//   font-size: 80px;
-//   color: white;
-// }
+.flickity-page-dots {
+  display: none;
+}

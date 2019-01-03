@@ -37,6 +37,8 @@ body {
   counter-increment: carousel-cell;
 }
 
-/* cell number */
+.flickity-page-dots {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
