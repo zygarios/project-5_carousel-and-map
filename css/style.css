@@ -62,4 +62,22 @@ body > p button {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .container p {
+    font-size: 70px;
+  }
+  body > p button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container p {
+    font-size: 35px;
+  }
+  body > p button {
+    font-size: 15px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

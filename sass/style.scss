@@ -3,6 +3,8 @@
   // border: .5px solid red;
 }
 
+
+
 body {
   font-family: sans-serif;
   position: relative;
@@ -56,4 +58,14 @@ body {
 }
 .flickity-page-dots {
   display: none;
+}
+
+
+@media (max-width: 768px) {
+  .container p {font-size: 70px;}
+  body>p button {font-size: 18px;}
+}
+@media (max-width: 500px) {
+  .container p {font-size: 35px;}
+  body>p button {font-size: 15px;}
 }
