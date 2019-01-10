@@ -8,7 +8,8 @@
 body {
   font-family: sans-serif;
   position: relative;
-  > p {
+}
+.carousel-button {
     position: absolute;
     top: 1%;
     right: 1%;
@@ -21,7 +22,6 @@ body {
       border: none;
     }
   }
-}
 .progress-bar {
   height: 20px;
   width: 0;
@@ -31,18 +31,21 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h1{
+}
+  .title{
+    padding-top: 15vh;
     color: white;
+    text-align: center;
     font-size: 100px;
     font-weight: bold;
     margin: 0;
     text-shadow: 3px 3px 3px black;
   }
-}
+.description {
+color: white;
+text-align: center;
 
+}
 
 .carousel {
   background: #FAFAFA;

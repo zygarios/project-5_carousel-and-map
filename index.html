@@ -11,78 +11,45 @@
 </head>
 
 <body>
-  <p><button class="button button--toggle">Restart</button></p>
+  <p class='carousel-button'><button class="button button--toggle">Restart</button></p>
   <div class="carousel">
-    <!-- <div class="carousel-cell" id="" style="background: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center /cover">
-      <div class="container">
-        <h1>
-          SLAJD NR 1
-        </h1>
-      </div>
-    </div>
-    <div class="carousel-cell" id="" style="background: url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center/cover">
-      <div class="container">
-        <h1>
-          SLAJD NR 2
-        </h1>
-      </div>
-    </div>
-    <div class="carousel-cell" id="" style="background: url('https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center 25%/cover">
-      <div class="container">
-        <h1>
-          SLAJD NR 3
-        </h1>
-      </div>
-    </div>
-    <div class="carousel-cell" id="" style="background: url('https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center/cover">
-      <div class="container">
-        <h1>
-          SLAJD NR 4
-        </h1>
-      </div>
-    </div>
-    <div class="carousel-cell" id="" style="background: url('https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center 25%/cover">
-      <div class="container">
-        <h1>
-          SLAJD NR 5
-        </h1>
-      </div>
-    </div> -->
+
   </div>
   <div class="progress-bar"></div>
 
   <script id="template" type="x-tmpl-mustache">
   <div class="carousel-cell" style="background: url('{{image}}') center /cover">
     <div class="container">
-      <h1>
+      <h1 class='title'>
         {{title}}
       </h1>
       {{{description}}}
     </div>
   </div>
+
   </script>
 
 <script>
 var slides = [
 {image: 'https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 title: 'Jezioro',
-description: '<p>Jezioro międz górami w pochmurny dzień</p>'
+description: '<p class ="description">Jezioro międz górami w pochmurny dzień</p>'
 },
 {image: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 title: 'Drzewo',
-description: '<p>Samotne drzewo w czasie zachodu słońca</p>'
+description: '<p class ="description">Samotne drzewo w czasie zachodu słońca</p>'
 },
 {image: 'https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 title: 'Wybrzeże',
-description: '<p>Wybrzeże nad oceanem w czasie wschodu słońca</p>'
+description: '<p class ="description">Wybrzeże nad oceanem w czasie wschodu słońca</p>'
 },
 {image: 'https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 title: 'Las',
-description: '<p>Mglisty las pośród wyrzyn i gór</p>'
+description: '<p class ="description">Mglisty las pośród wyrzyn i gór</p>'
 },
 {image: 'https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 title: 'Dolina',
-description: '<p>Dolina wyznaczona przez krętą rzekę</p>'
+description: '<p class ="description">Dolina wyznaczona przez krętą rzekę</p>'
 }
 ];
 </script>
