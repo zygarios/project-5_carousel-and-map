@@ -6,16 +6,86 @@
   <title>Tytuł</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-  <h3>My Google Maps Demo</h3>
-  <!--The div element for the map -->
+  <p class='carousel-button'><button class="button button--toggle">Restart</button></p>
+  <div class="carousel">
+
+  </div>
+  <div class="progress-bar"></div>
+
   <div id="map"></div>
+
+
+  <script id="template" type="x-tmpl-mustache">
+    <div class="carousel-cell" style="background: url('{{image}}') center /cover">
+    <div class="container">
+      <h1 class='title'>
+        {{title}}
+      </h1>
+      {{{description}}}
+    </div>
+  </div>
+
+  </script>
+
+  <script>
+    var slides = [{
+        image: 'https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        title: 'Warszawa',
+        description: '<p class ="description">Stolica: Polska</p>',
+        coords: {
+          lat: 52.229812,
+          lng: 21.011760
+        }
+      },
+      {
+        image: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        title: 'Nowy Jork',
+        description: '<p class ="description">Stolica: Stany Zjednoczone</p>',
+        coords: {
+          lat: 40.711030,
+          lng: -74.015374
+        }
+      },
+      {
+        image: 'https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        title: 'Londyn',
+        description: '<p class ="description">Stolica: Wielka Brytania</p>',
+        coords: {
+          lat: 51.508867,
+          lng: -0.127347
+        }
+      },
+      {
+        image: 'https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        title: 'Dubaj',
+        description: '<p class ="description">Stolica: Rosja</p>',
+        coords: {
+          lat: 55.753072,
+          lng: 37.592305
+        }
+      },
+      {
+        image: 'https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        title: 'Pekin',
+        description: '<p class ="description">Stolica: Chiny</p>',
+        coords: {
+          lat: 39.912940,
+          lng: 116.395977
+        }
+      }
+    ];
+  </script>
+  <script src='vendor/mustache.min.js'></script>
+  <script src='vendor/flickity.pkgd.min.js'></script>
+  <script src='vendor/hash.js'></script>
   <script src='js/script.js'></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC0l3eWFlFNgbkSxaBq3-egUk6b3RPZyw&callback=initMap"
-  type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqZhh6BifixVH7AQAwqQBYXeHLSEcWs-A&callback=initMap"></script>
+  </script>
 </body>
 
 </html>
