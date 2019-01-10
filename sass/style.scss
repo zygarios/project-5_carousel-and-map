@@ -34,7 +34,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  p{
+  h1{
     color: white;
     font-size: 100px;
     font-weight: bold;
@@ -62,10 +62,10 @@ body {
 
 
 @media (max-width: 768px) {
-  .container p {font-size: 70px;}
+  .container h1 {font-size: 60px;}
   body>p button {font-size: 18px;}
 }
 @media (max-width: 500px) {
-  .container p {font-size: 35px;}
+  .container h1 {font-size: 35px;}
   body>p button {font-size: 15px;}
 }
