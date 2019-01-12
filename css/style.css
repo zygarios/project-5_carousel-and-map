@@ -12,6 +12,22 @@ body {
   height: 50vh;
 }
 
+.zoom-out {
+  position: absolute;
+  bottom: 24.5px;
+  right: 50.5px;
+  border: none;
+  padding: 11px;
+  background: white;
+  cursor: pointer;
+  color: #666666;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-out:hover {
+  color: black;
+}
+
 .carousel-button {
   position: absolute;
   top: 1%;

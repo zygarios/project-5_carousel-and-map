@@ -22,6 +22,7 @@ var flkty = new Flickity('.carousel', {
 });
 
 var toggleButton = document.querySelector('.button--toggle');
+var allSingleSlide = document.querySelectorAll('.carousel-cell');
 toggleButton.addEventListener('click', function() {
   flkty.select(0);
 });
@@ -34,21 +35,51 @@ flkty.on('scroll', function(progress) {
 });
 
 
+
+
 //Google maps
 window.initMap = function() {
 
-var city = slides[0].coords;
+  var city = slides[0].coords;
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 12,
     center: city
   });
+  var marker = [];
+  for (var i = 0; i < slides.length; i++) {
 
+    marker[i] = new google.maps.Marker({
+      position: slides[i].coords,
+      map: map
+    });
+    // marker[i].addListener('click', function() {
+    //   flkty.select(i);
+    // });
+  }
+  //DLACZEGO TA PĘTLA NIE DZIAŁA?! NIE MOGĘ TEGO USTAWIĆ :(
 
-    slides.forEach(function(marker) {
-      marker = new google.maps.Marker({
-          position: marker.coords,
-          map: map
-        });
-      });
+  marker[0].addListener('click', () => {
+    flkty.select(0);
+  });
+  marker[1].addListener('click', () => {
+    flkty.select(1);
+  });
+  marker[2].addListener('click', () => {
+    flkty.select(2);
+  });
+  marker[3].addListener('click', () => {
+    flkty.select(3);
+  });
+  marker[4].addListener('click', () => {
+    flkty.select(4);
+  });
+  flkty.on('change', function(index) {
+    map.panTo(slides[index].coords);
+    map.setZoom(12);
+  });
+  var zoomOutButton = document.querySelector('.zoom-out');
+  zoomOutButton.addEventListener('click', ()=> {
+    map.setZoom(2);
+  });
 }
