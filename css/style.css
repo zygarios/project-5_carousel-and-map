@@ -59,7 +59,7 @@ body {
 }
 
 .container p {
-  font-size: 25px;
+  font-size: 35px;
 }
 
 p, h1 {
@@ -99,7 +99,7 @@ p, h1 {
 
 @media (max-width: 768px) {
   .container p {
-    font-size: 20px;
+    font-size: 30px;
   }
   .container h1 {
     font-size: 70px;
@@ -111,7 +111,7 @@ p, h1 {
 
 @media (max-width: 500px) {
   .container p {
-    font-size: 13px;
+    font-size: 20px;
   }
   .container h1 {
     font-size: 50px;

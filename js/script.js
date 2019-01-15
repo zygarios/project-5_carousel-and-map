@@ -3,7 +3,6 @@
 
 //Template for carousel
 var templateSlide = document.querySelector('#template').innerHTML;
-
 Mustache.parse(templateSlide);
 
 var allSlides = '';
@@ -48,33 +47,29 @@ window.initMap = function() {
   });
   var marker = [];
   for (var i = 0; i < slides.length; i++) {
-
     marker[i] = new google.maps.Marker({
       position: slides[i].coords,
       map: map
     });
-    // marker[i].addListener('click', function() {
-    //   flkty.select(i);
-    // });
   }
-  //DLACZEGO TA PĘTLA NIE DZIAŁA?! NIE MOGĘ TEGO USTAWIĆ :(
+  //
+  // for (var i = 0; i < marker.length; i++) {
+  //   console.log(i)
+  //   marker[i].addListener('click', function() {
+  //     flkty.select(i);
+  //   })
+  // }
+  //Wciąż nie rozumiem dlaczego nawet poza tamtym forem to wciąż nie działa a each for poniżej tak...
 
-  marker[0].addListener('click', () => {
-    flkty.select(0);
+
+  marker.forEach((singleMarker, index) => {
+    singleMarker.addListener('click', function() {
+      flkty.select(index);
+    });
   });
-  marker[1].addListener('click', () => {
-    flkty.select(1);
-  });
-  marker[2].addListener('click', () => {
-    flkty.select(2);
-  });
-  marker[3].addListener('click', () => {
-    flkty.select(3);
-  });
-  marker[4].addListener('click', () => {
-    flkty.select(4);
-  });
-  flkty.on('change', function(index) {
+
+
+ flkty.on('change', function(index) {
     map.panTo(slides[index].coords);
     map.setZoom(12);
   });
